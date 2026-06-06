@@ -33,9 +33,10 @@ def analyze_audio_with_gemini(file_path, prompt):
         
     st.info("🧠 Gemini 1.5 Flash lyssnar och analyserar...")
     # 3. Skicka filen + prompten till Gemini
+   # 3. Skicka filen + prompten till Gemini
     response = model.generate_content(
         [prompt, audio_file],
-        config={"response_mime_type": "application/json", "temperature": 0.1}
+        generation_config={"response_mime_type": "application/json", "temperature": 0.1}
     )
     
     # 4. Städa upp och ta bort filen från molnet
