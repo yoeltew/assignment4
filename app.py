@@ -15,7 +15,7 @@ HF_MODEL_REPO = st.secrets["HF_MODEL_REPO"]
 # --- FUNKTIONER ---
 def analyze_audio_with_gemini(file_path, prompt):
     genai.configure(api_key=GEMINI_KEY)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-2.5-flash')
     
     start_time = time.time()
     
